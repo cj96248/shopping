@@ -9,7 +9,7 @@
 </head>
 <br>
 <body>
-<form action="">
+<form action="UserServlet">
 	<table align="center" border="1" >
 		<tr>
 			<td>ID*：<input name="id" type="text"></td>

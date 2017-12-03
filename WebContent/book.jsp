@@ -4,17 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>功能选择</title>
+<title>Insert title here</title>
 </head>
-<h1 align="center">欢迎来到我的书店</h1>
 <body>
-<table align="center">
-	<tr>
-		<td><h3><a href="book.jsp">图书管理</a></h3></td>
-	</tr>
-	<tr>
-		<td><h3><a href="login.jsp">用户管理</a></h3></td>
-	</tr>
-</table>
+
 </body>
 </html>

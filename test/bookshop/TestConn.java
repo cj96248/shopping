@@ -25,16 +25,16 @@ public class TestConn {
 		uService.save(user);
 	}
 	
-	public static void main3(String[] args){
-		UserService service = new UserService();
-		List<UserBean> list = service.getUsers();
-		System.out.println(list);
-	}
-	
 	public static void main(String[] args){
 		UserService service = new UserService();
-		UserBean u = service.getUserByName("2");
-		System.out.println(u);
+		List<UserBean> list = service.getUsers(0,3);
+		System.out.println(list.size());
+	}
+	
+	public static void main4(String[] args){
+		UserService service = new UserService();
+		List<UserBean> list = service.getUserByName("2");
+		System.out.println(list);
 	}
 	
 }
