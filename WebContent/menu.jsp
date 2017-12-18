@@ -5,15 +5,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	.menu{
+		background-color: #FFF098
+	}
+</style>
 </head>
 <title>书店后台管理系统</title>
 <h2 align="center">书店后台管理系统</h2>
 <body>
-	<table align="center" border="1">
+	<table align="center" border="1" class="menu">
 		<thead>
 			<tr>
-				<td><a href="list.jsp">用户列表</a></td>
-				<td><a href="search.jsp">用户检索</a></td>
+				<td><a href="list.jsp">用户列表</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><a href="search.jsp">用户检索</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td><a href="add.jsp">添加用户</a></td>
 				<td><a href="recover.jsp">恢复用户</a></td>
 				<td><a href="report.jsp">报表</a></td>

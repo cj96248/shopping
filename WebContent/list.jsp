@@ -64,7 +64,7 @@ Current : <%=pageNo %>
 <a href="list.jsp?pageNo=<%=pageNo-1 %>">Previous</a>&nbsp;&nbsp;&nbsp;
 	<%
 } %>
-<% if(list.size() >= 5){
+<% if(list.size() >= pageSize){
 %>
 <a href="list.jsp?pageNo=<%=pageNo+1 %>">Next</a>&nbsp;&nbsp;&nbsp; 
 	<%

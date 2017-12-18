@@ -1,6 +1,8 @@
 package com.spsp.servlet;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,14 +29,7 @@ public class UserUpdateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String age = request.getParameter("age");
@@ -46,7 +41,16 @@ public class UserUpdateServlet extends HttpServlet {
 		userBean.setName(name);
 		UserService service = new UserService();
 		service.update(userBean);
-		response.sendRedirect("message.jsp?message='更新成功'");
+		response.setContentType("text/html;charset=UTF-8");
+		String message = URLEncoder.encode("更新成功", "UTF-8");
+		response.sendRedirect("message.jsp?message=" + message);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 
 }

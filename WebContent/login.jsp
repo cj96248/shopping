@@ -5,7 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>欢迎来到我的书店</title>
+<style type="text/css">
+body{
+	background-color: #FFFABC;
+
+}
+
+</style>
 </head>
+
 <body>
 <h3 align="center">书店后台登录</h3>
 <form action="LoginServlet" method="post">

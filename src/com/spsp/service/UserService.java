@@ -119,6 +119,19 @@ public class UserService {
 		}
 	}
 	
+	public void unfrozenUserById(String id){
+		Connection conn = DBConnection.getConnection();
+		String sql = "update user set user.status='A' where id=?";
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, id);
+			System.out.println(stmt.toString());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public List<UserBean> getUsers(){
 		List<UserBean> list = new ArrayList<>();
 		Connection conn = DBConnection.getConnection();
@@ -185,6 +198,23 @@ public class UserService {
 				user.setStatus(rs.getString("status"));
 				user.setRdate(rs.getTimestamp("rdate"));
 				list.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return list;
+	} 
+	
+	public List<UserBean> getCount(){
+		List<UserBean> list = new ArrayList<>();
+		Connection conn = DBConnection.getConnection();
+		String sql = "select count(*) from user";
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()){
+				System.out.println(rs.getInt(1));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

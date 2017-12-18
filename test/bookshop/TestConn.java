@@ -25,7 +25,7 @@ public class TestConn {
 		uService.save(user);
 	}
 	
-	public static void main(String[] args){
+	public static void main3(String[] args){
 		UserService service = new UserService();
 		List<UserBean> list = service.getUsers(0,3);
 		System.out.println(list.size());
@@ -36,5 +36,10 @@ public class TestConn {
 		List<UserBean> list = service.getUserByName("2");
 		System.out.println(list);
 	}
+	public static void main(String[] args) {
+		UserService service = new UserService();
+		List<UserBean> list = service.getCount();
+	}
+	
 	
 }

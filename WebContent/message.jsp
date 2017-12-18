@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="menu.jsp"%>
 <%
+request.setCharacterEncoding("UTF-8");
 	String message = request.getParameter("message");
 	if(message == null){
 		message = "";
@@ -15,6 +16,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 	<p><%= message %></p>
+</center>
 </body>
 </html>

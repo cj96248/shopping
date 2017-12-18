@@ -6,6 +6,8 @@
 	String id = request.getParameter("uid");
 	UserService service = new UserService();
 	service.deleteUserById(id);
+	
+	response.sendRedirect("message.jsp?message=delete successful");
 
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -16,9 +18,6 @@
 </head>
 <br>
 <body>
-<p>删除成功</p>
 </body>
-<%
-	response.sendRedirect("main.jsp");
-%>
+
 </html>

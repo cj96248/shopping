@@ -33,7 +33,7 @@ public class UserServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=UTF-8");
 		if (id == null || id.equals("")) {
-			 response.getWriter().print("id 不能为空");
+			response.sendRedirect("message.jsp?message=Id can't be empty");
 			 return;
 		}
 		String name = request.getParameter("name");
@@ -50,7 +50,7 @@ public class UserServlet extends HttpServlet {
 		
 		UserService service = new UserService();
 		service.save(user);
-		response.sendRedirect("list.jsp");
+		response.sendRedirect("message.jsp?message=Add User successful");
 	}
 
 	/**

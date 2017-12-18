@@ -34,7 +34,7 @@
 			<td><%= u.getAge() %></td>
 			<td><%= u.getRdate() %></td>
 			<td><%= u.getStatus().equals("A") ? "正常": "冻结" %>
-			<td><a href="update.jsp?uid=<%=u.getId() %>">恢复</a>&nbsp;&nbsp;<a href="delete.jsp?uid=<%=u.getId() %>">删除</a></td>
+			<td><a href="recoverUser.jsp?uid=<%=u.getId() %>">恢复</a>&nbsp;&nbsp;<a href="delete.jsp?uid=<%=u.getId() %>">删除</a></td>
 		</tr>	
 		 <%
 			}
